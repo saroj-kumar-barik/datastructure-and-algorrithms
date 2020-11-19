@@ -10,7 +10,7 @@ public class BubbleSortDemo {
             // 2nd for loop will run 2 times less than the no of array elements so here
             // arr.length - i -1
             for (int j = 0; j< arr.length-i-1;j++){
-                if (arr[j+1] < arr[j]){
+                if (arr[j] > arr[j+1]){
                     // then apply swapping inside 2nd for loop
                     // * SWAPPING(to do quickly with out thinking), here the left side operand in the for loop is a
                     // and right part is b
