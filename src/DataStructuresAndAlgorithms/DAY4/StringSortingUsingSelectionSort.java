@@ -3,11 +3,8 @@ package DataStructuresAndAlgorithms.DAY4;
 import java.util.Arrays;
 
 public class StringSortingUsingSelectionSort {
-
     public static void main(String[] args) {
-        int j;
-
-        String[] arr = {"mama", "bablu", "pragyna", "saroj","bibhu","miki","summu"};
+        String[] arr = {"mama", "bablu", "pragyna", "saroj"};
 
         System.out.println("Array before sorting");
 
@@ -16,17 +13,18 @@ public class StringSortingUsingSelectionSort {
         for (int i = 0; i < arr.length; i++) {
             String minValue = arr[i];
             int minIndex = i;
-            for (j = minIndex + 1; j < arr.length; j++) {
+            for (int j = minIndex + 1; j < arr.length; j++) {
                 if (arr[j].compareTo(minValue) < 0) {
                     minValue = arr[j];
                     minIndex = j;
                 }
             }
-
-            String temp;
-            temp = arr[i];
-            arr[i] = arr[minIndex];
-            arr[minIndex] = temp;
+            if (minIndex != i) {
+                String temp;
+                temp = minValue;
+                minValue = arr[minIndex];
+                arr[i] = temp;
+            }
 
         }
         System.out.println("array after sorting..");
