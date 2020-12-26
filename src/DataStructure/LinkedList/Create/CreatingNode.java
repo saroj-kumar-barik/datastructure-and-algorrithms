@@ -1,4 +1,4 @@
-package DataStructure.LinkedList;
+package DataStructure.LinkedList.Create;
 
 public class CreatingNode {
     Node first;
