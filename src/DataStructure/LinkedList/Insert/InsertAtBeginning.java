@@ -18,7 +18,9 @@ public class InsertAtBeginning {
 
     public void push(int newData) {
         Node newNode = new Node(newData);
+        // here 'head' will be the second node and newNode will be the head.
         newNode.next = head;
+        // assigning the responsibility of head to new node. So that newNode works as head
         head = newNode;
     }
 
