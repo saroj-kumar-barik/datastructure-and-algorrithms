@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class MergeSort {
     public static void merge(int[] arr, int l, int m, int r) {
-        int n1 = m - l + 1;
+        int n1 = m - l +1 ;
         int n2 = r - m;
 
         /* Create temp arrays */
@@ -45,6 +45,12 @@ public class MergeSort {
 
     public static void sort(int[] arr, int l, int r) {
         if (l < r) {
+            // here the mid is taken l + (r-l)/2 not  (r-l)/2  bcz
+            // for the second recursive call we want the mid index m+1 or greater but
+            // if we write (r-l)/2 then index will give zero which is not true.
+            // ShortCut : To understand why mid is written l + (r-l)/2 not  (r-l)/2
+            // run the second recursive fucn, you will get the ans
+
             // Find the middle point
             int m =l+ (r-l)/2;
 
@@ -58,7 +64,7 @@ public class MergeSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {22, 3, 11, 44};
+        int[] arr = {22, 3, 11, 44,11,6};
         //                      3
         sort(arr, 0, arr.length - 1);
         System.out.println("Sorted array is ");
