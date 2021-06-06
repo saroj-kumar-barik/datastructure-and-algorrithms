@@ -1,6 +1,7 @@
 package AlgoAgain.DAY12;
 
 // Java implementation of QuickSort
+//
 
 public class quickSort {
 
@@ -62,6 +63,12 @@ public class quickSort {
     public static void main(String[] args)
     {
         int[] arr = { 10, 7, 8, 3, 4, 1, 5 };
+//        int[] arr = { 3, 4, 1, 5, 10, 7, 8};
+//        int[] arr = { 3, 4, 1, 5, 7, 8, 10};
+
+
+
+
 //        int[] arr = { 1, 3, 4, 5, 7, 8, 10 }; i = 2 n .s = i+1 = 3
         int n = arr.length;
 
