@@ -16,6 +16,8 @@ public class QuickSortAnatherApproach {
         int right = l;
 
         int pivot = arr[(left+right)/2];
+//        int pivot = arr[left];
+//        int pivot = arr[right];
 
         while (left <= right){
             while (arr[left] < pivot)
@@ -32,7 +34,7 @@ public class QuickSortAnatherApproach {
         qsort(arr,left,l);
     }
     public static void main(String[] args) {
-        int[] arr = {2,8,1,10};
+        int[] arr = {2,8,1,10,3,12,5};
         qsort(arr,0,arr.length-1);
         System.out.println(Arrays.toString(arr));
     }
