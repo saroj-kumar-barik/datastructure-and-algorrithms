@@ -8,19 +8,18 @@ public class QuickSortAnatherApproach {
         arr[i] = arr[j];
         arr[j] = temp;
     }
-    public static void qsort(int[] arr, int f, int l){
+    public static void qsort(int[] arr, int l, int r){
         // for recursion terminating condition
-        if (f >= l) return;
+        if (l >= r) return;
         // temp variables
-        int left = f;
-        int right = l;
+        int left = l;
+        int right = r;
 
 
         // taking pivot
-        int pivot = arr[(left+right)/2];
+        int pivot = arr[left+right/2]; // int pivot = arr[left+(right-left)/2];
 //        int pivot = arr[left];
 //        int pivot = arr[right];
-
 
         // place the pivot element in the rightful(nearly right position)
 
@@ -41,8 +40,8 @@ public class QuickSortAnatherApproach {
                 right--;
             }
         }
-        qsort(arr,f,right);
-        qsort(arr,left,l);
+        qsort(arr,l,right);
+        qsort(arr,left,r);
     }
     public static void main(String[] args) {
         int[] arr = {2,8,1,10,3,12,5};
